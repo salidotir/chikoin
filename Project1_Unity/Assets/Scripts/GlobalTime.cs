@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GlobalTime : MonoBehaviour {
 
@@ -11,11 +12,19 @@ public class GlobalTime : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (is_time_finished == false)
-        {
-			is_time_finished = true;
-			StartCoroutine(reduceSeconds());
-        }
+		if (seconds == 0)
+		{
+			seconds = 0;
+			SceneManager.LoadScene(1);
+		}
+		else
+		{
+			if (is_time_finished == false)
+			{
+				is_time_finished = true;
+				StartCoroutine(reduceSeconds());
+			}
+		}
 	}
 
 	IEnumerator reduceSeconds()
