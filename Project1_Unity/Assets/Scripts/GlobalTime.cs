@@ -10,18 +10,27 @@ public class GlobalTime : MonoBehaviour {
 	public int seconds = 30;
 	public bool is_time_finished;
 
+	public GameObject TimeUpText;
+	public GameObject FadeOut;
+	public GameObject Player;
+
 	// Update is called once per frame
 	void Update () {
 		if (seconds == 0)
 		{
+			Player.GetComponent<PlayerControls>().enabled = false;
 			seconds = 0;
-			SceneManager.LoadScene(1);
+			TimeUpText.SetActive(true);
+			FadeOut.SetActive(true);
+
+			StartCoroutine(restartLevel());
 		}
 		else
 		{
 			if (is_time_finished == false)
 			{
 				is_time_finished = true;
+
 				StartCoroutine(reduceSeconds());
 			}
 		}
@@ -34,4 +43,10 @@ public class GlobalTime : MonoBehaviour {
 		timeDisplay.GetComponent<Text>().text = "Time: " + seconds;
 		is_time_finished = false;
     }
+
+	IEnumerator restartLevel()
+    {
+		yield return new WaitForSeconds(3);
+		SceneManager.LoadScene(1);
+	}
 }
