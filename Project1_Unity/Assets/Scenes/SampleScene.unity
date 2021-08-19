@@ -1498,6 +1498,7 @@ GameObject:
   - component: {fileID: 407081767}
   - component: {fileID: 407081769}
   - component: {fileID: 407081770}
+  - component: {fileID: 407081771}
   m_Layer: 0
   m_Name: Globals
   m_TagString: Untagged
@@ -1642,6 +1643,19 @@ MonoBehaviour:
   TimeUpText: {fileID: 888964541}
   FadeOut: {fileID: 1900302640}
   Player: {fileID: 2078499588}
+--- !u!114 &407081771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 407081766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4024a6234e404429fe164e9c9ca5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamePaused: 0
+  pauseMenu: {fileID: 1132555048}
 --- !u!1 &435775492
 GameObject:
   m_ObjectHideFlags: 0
@@ -4114,7 +4128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1132555049
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4133,7 +4147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.1, y: 8.4}
+  m_AnchoredPosition: {x: -8.099976, y: 8.400024}
   m_SizeDelta: {x: -1421, y: -257}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132555050

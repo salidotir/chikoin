@@ -22,7 +22,7 @@ public class PauseGame : MonoBehaviour {
 
 			else
             {
-				pauseMenu.SetActive(true);
+				pauseMenu.SetActive(false);
 				this.GetComponent<AudioSource>().UnPause();
 				Cursor.visible = false;
 				gamePaused = false;
