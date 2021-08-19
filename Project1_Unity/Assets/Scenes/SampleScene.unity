@@ -1638,7 +1638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDisplay: {fileID: 503311901}
-  seconds: 30
+  seconds: 60
   is_time_finished: 0
   TimeUpText: {fileID: 888964541}
   FadeOut: {fileID: 1900302640}
@@ -2006,7 +2006,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'TIME: 30'
+  m_Text: 'TIME: 60'
 --- !u!222 &503311904
 CanvasRenderer:
   m_ObjectHideFlags: 0

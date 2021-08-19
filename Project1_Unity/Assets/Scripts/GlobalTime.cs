@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GlobalTime : MonoBehaviour {
 
 	public GameObject timeDisplay;
-	public int seconds = 30;
+	public int seconds = 60;
 	public bool is_time_finished;
 
 	public GameObject TimeUpText;

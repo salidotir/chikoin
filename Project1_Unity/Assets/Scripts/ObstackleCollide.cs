@@ -25,6 +25,7 @@ public class ObstackleCollide : MonoBehaviour {
     IEnumerator restartLevel()
     {
         yield return new WaitForSeconds(3);
+        GlobalCoins.coinCount = 0;
         SceneManager.LoadScene(1);
     }
 }

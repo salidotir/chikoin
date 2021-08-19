@@ -43,6 +43,7 @@ public class PauseGame : MonoBehaviour {
 
 	public void RestartGame()
     {
+		GlobalCoins.coinCount = 0;
 		Time.timeScale = 1;
 		SceneManager.LoadScene(1);
 	}
