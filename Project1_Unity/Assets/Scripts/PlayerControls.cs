@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour {
 
-/*
-	// Use this for initialization
-	void Start () {
-		
-	}
-*/
-
 	public float moveSpeed = 1.5f;
 	public GameObject playerChicken;
 
@@ -60,6 +53,28 @@ public class PlayerControls : MonoBehaviour {
 		if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
 		{
 			playerChicken.transform.localRotation = Quaternion.Euler(0, 315, 0);
+		}
+	}
+
+	// add script to player to detect collision with walls
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.name == "WallLeft")
+		{
+			transform.Translate(Vector3.right* Time.deltaTime * moveSpeed);
+			playerChicken.transform.localRotation = Quaternion.Euler(0, 90, 0);
+		}
+
+		if (other.gameObject.name == "WallRight")
+		{
+			transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
+			playerChicken.transform.localRotation = Quaternion.Euler(0, 270, 0);
+		}
+
+		if (other.gameObject.name == "WallAcross")
+		{
+			transform.Translate(Vector3.back * Time.deltaTime * moveSpeed);
+			playerChicken.transform.localRotation = Quaternion.Euler(0, 180, 0);
 		}
 	}
 }
